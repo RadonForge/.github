@@ -7,6 +7,36 @@ body:
     attributes:
       value: |
         Thanks for taking the time to suggest a new feature!
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature Area
+      description: Which area of the project does this feature relate to?
+      options:
+        - Core Functionality
+        - User Interface
+        - API/Backend
+        - Documentation
+        - Build/Deployment
+        - Performance
+        - Security
+        - Testing
+        - Integration
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - Critical - Blocking my work
+        - High - Important for my use case
+        - Medium - Would improve my workflow
+        - Low - Nice to have
+    validations:
+      required: true
   - type: textarea
     id: problem-description
     attributes:
@@ -23,6 +53,25 @@ body:
       placeholder: "It would be great if..."
     validations:
       required: true
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Expected Benefits
+      description: What improvements or value would this feature bring?
+      placeholder: |
+        - Improved user experience by...
+        - Faster workflow through...
+        - Better integration with...
+    validations:
+      required: true
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Suggested Implementation
+      description: If you have ideas on how to implement this feature, please share them.
+      placeholder: "This could be implemented by..."
+    validations:
+      required: false
   - type: textarea
     id: alternatives
     attributes:

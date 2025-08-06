@@ -7,6 +7,35 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - Critical - System unusable
+        - High - Major functionality broken
+        - Medium - Minor functionality affected
+        - Low - Cosmetic or minor issue
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected Area
+      description: Which area of the project does this bug affect?
+      options:
+        - Core Functionality
+        - User Interface
+        - API/Backend
+        - Documentation
+        - Build/Deployment
+        - Performance
+        - Security
+        - Testing
+        - Other
+    validations:
+      required: true
   - type: textarea
     id: what-happened
     attributes:
@@ -41,6 +70,14 @@ body:
         - OS:
         - Version:
       render: markdown
+    validations:
+      required: false
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround
+      description: If you have found a temporary solution or workaround, please describe it here.
+      placeholder: "To work around this issue, I..."
     validations:
       required: false
   - type: textarea
