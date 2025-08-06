@@ -35,7 +35,7 @@ body:
         - Testing
         - Other
     validations:
-      required: true
+      required: false
   - type: textarea
     id: what-happened
     attributes:
